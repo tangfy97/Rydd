@@ -14,7 +14,7 @@ A small macOS menu bar app that keeps the folders you choose tidy. It learns fro
 
 <img src="docs/images/screenshot.jpg" alt="Rydd's review window suggesting folders for files in Downloads">
 
-**Download:** Rydd 1.0 is free. It is coming to the Mac App Store, and a signed, notarized download will be on [Releases](https://github.com/tangfy97/Rydd/releases) and [tang-spark.no/rydd](https://tang-spark.no/rydd.html). It needs macOS 26 Tahoe or later, and Apple Intelligence for the optional on-device sorting.
+**Download:** Rydd 1.0 is free. Get the signed, notarized disk image from [Releases](https://github.com/tangfy97/Rydd/releases/latest) or [tang-spark.no/rydd](https://tang-spark.no/rydd.html); it is coming to the Mac App Store. It needs macOS 26 Tahoe or later, and Apple Intelligence for the optional on-device sorting.
 
 ## Build
 
