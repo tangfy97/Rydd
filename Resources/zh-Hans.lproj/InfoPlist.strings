@@ -1,0 +1,3 @@
+"NSDownloadsFolderUsageDescription" = "Rydd 读取文件名，用来给出整理建议。所有处理都在本机完成。";
+"NSDocumentsFolderUsageDescription" = "Rydd 读取你已有文件夹的名字，用来判断文件该放在哪里。所有处理都在本机完成。";
+"NSDesktopFolderUsageDescription" = "Rydd 读取文件名，用来给出整理建议。所有处理都在本机完成。";

@@ -1,0 +1,73 @@
+/* Menu bar menu */
+"Review ^[%lld File](inflect: true)…" = "查看 %lld 个文件…";
+"Review…" = "查看…";
+"Undo Last Tidy" = "撤销上次整理";
+"Scanning…" = "正在扫描…";
+"Rescan" = "重新扫描";
+"Set Up Rydd…" = "设置 Rydd…";
+"Settings…" = "设置…";
+"Quit Rydd" = "退出 Rydd";
+"Rydd: files to tidy" = "Rydd：有文件待整理";
+
+/* Review window */
+"^[%lld File](inflect: true) to Tidy" = "%lld 个文件待整理";
+"Name" = "名称";
+"Move To" = "移到";
+"Tidy ^[%lld File](inflect: true)" = "整理 %lld 个文件";
+"Tidy" = "整理";
+"Nothing to Tidy" = "没有需要整理的文件";
+"Recent files wait a few days." = "新文件会过几天再整理。";
+"Choose…" = "选择…";
+"Other Folder…" = "其他文件夹…";
+"Move to Trash" = "移到废纸篓";
+"Don't Tidy" = "不整理";
+"Show in Finder" = "在 Finder 中显示";
+"Some files couldn't be moved." = "有些文件未能移动。";
+"OK" = "好";
+"Applications" = "应用程序";
+"Trash" = "废纸篓";
+"Unsorted" = "未分类";
+"Move Here" = "移到这里";
+
+/* Settings */
+"General" = "通用";
+"Folders" = "文件夹";
+"Open at Login" = "登录时打开";
+"Wait Before Tidying" = "整理前等待";
+"Right Away" = "不等待";
+"1 Day" = "1 天";
+"3 Days" = "3 天";
+"1 Week" = "1 周";
+"Sort with Apple Intelligence" = "使用 Apple 智能归类";
+"Read File Contents" = "读取文件内容";
+"Add Folder…" = "添加文件夹…";
+"Add" = "添加";
+"Remove" = "移除";
+"This Mac doesn't support Apple Intelligence" = "这台 Mac 不支持 Apple 智能";
+"Apple Intelligence is turned off" = "Apple 智能未开启";
+"The on-device model isn't ready yet" = "设备端模型尚未就绪";
+"The on-device model isn't available" = "设备端模型不可用";
+
+/* Welcome */
+"Welcome to Rydd" = "欢迎使用 Rydd";
+"Rydd keeps the folders you choose tidy. Everything happens on your Mac." = "Rydd 会让你选择的文件夹保持整洁。所有处理都在你的 Mac 上完成。";
+"Choose Folders" = "选择文件夹";
+"Rydd only looks at the folders you choose." = "Rydd 只会查看你选择的文件夹。";
+"Back" = "返回";
+"Continue" = "继续";
+"Rydd Is in the Menu Bar" = "Rydd 在菜单栏中";
+"Click the drawer in the menu bar to review and tidy your files." = "点按菜单栏中的抽屉图标，即可查看并整理文件。";
+"Start" = "开始";
+
+/* Privacy */
+"Privacy" = "隐私";
+"Private by Design" = "隐私保护";
+"Rydd uses Apple's on-device model. It works offline." = "Rydd 使用 Apple 设备端模型，可离线运行。";
+"The model only sees file and folder names." = "模型只会看到文件名和文件夹名。";
+"Nothing leaves your Mac. Rydd never connects to the internet." = "所有内容都留在你的 Mac 上，Rydd 从不联网。";
+"Files are read on this Mac only, and only when their names aren't enough." = "文件只在这台 Mac 上读取，且仅在文件名不足以判断时才读取。";
+"Nothing is uploaded or stored." = "内容不会被上传，也不会被保存。";
+
+/* About */
+"About Rydd" = "关于 Rydd";
+"Free. Works offline. Nothing leaves your Mac." = "免费 · 离线运行 · 所有内容都留在你的 Mac 上";

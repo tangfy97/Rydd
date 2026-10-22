@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2F86D6"/>
+      <stop offset="1" stop-color="#145696"/>
+    </linearGradient>
+    <linearGradient id="front" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E4EFFA"/>
+    </linearGradient>
+    <linearGradient id="lower" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#C9DFF5"/>
+      <stop offset="1" stop-color="#A9CAEC"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Squircle background (macOS icon grid: 824pt body inside 1024) -->
+  <rect x="100" y="100" width="824" height="824" rx="185" fill="url(#bg)"/>
+
+  <!-- Lower drawer -->
+  <rect x="262" y="614" width="500" height="170" rx="40" fill="#0C447C" opacity="0.35"/>
+  <rect x="262" y="600" width="500" height="170" rx="40" fill="url(#lower)"/>
+  <rect x="452" y="671" width="120" height="28" rx="14" fill="#185FA5"/>
+
+  <!-- Files sticking out of the open top drawer -->
+  <rect x="330" y="250" width="110" height="200" rx="20" fill="#FAC775"/>
+  <rect x="352" y="282" width="66" height="14" rx="7" fill="#FFFFFF" opacity="0.6"/>
+  <rect x="460" y="215" width="110" height="235" rx="20" fill="#F0997B"/>
+  <rect x="482" y="247" width="66" height="14" rx="7" fill="#FFFFFF" opacity="0.6"/>
+  <rect x="590" y="270" width="110" height="180" rx="20" fill="#5DCAA5"/>
+  <rect x="612" y="302" width="66" height="14" rx="7" fill="#FFFFFF" opacity="0.6"/>
+
+  <!-- Open top drawer, pulled forward -->
+  <rect x="250" y="548" width="524" height="40" rx="20" fill="#0C447C" opacity="0.25"/>
+  <rect x="240" y="400" width="544" height="170" rx="40" fill="url(#front)"/>
+  <rect x="452" y="471" width="120" height="28" rx="14" fill="#185FA5"/>
+</svg>
