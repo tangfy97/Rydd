@@ -3,7 +3,7 @@
 ## Menu bar app
 
 ```bash
-Scripts/build_app.sh && open build/Rydd.app
+scripts/dev-app.sh && open build/dev/Rydd.app
 ```
 
 The user journey is written up in `docs/user-journey.md`. In short:
@@ -16,7 +16,7 @@ The user journey is written up in `docs/user-journey.md`. In short:
 - English and Simplified Chinese, following the system language (`Resources/*.lproj`).
 - Rescans 5 s after a chosen folder changes; folder profiles and per-file AI verdicts are cached.
 - Undo history (last 20) survives restarts; moves never overwrite; "delete" means the Trash.
-- Development: `open build/Rydd.app --args --home <fixture> [-AppleLanguages "(en)"] [--open-review]
+- Development: `open build/dev/Rydd.app --args --home <fixture> [-AppleLanguages "(en)"] [--open-review]
   [--open-settings] [--welcome-step N]` runs against a test folder with its own settings.
 
 ## Privacy
@@ -32,8 +32,8 @@ the code:
 
 ## Icons
 
-- App icon "Skuff" (drawer): `Design/AppIcon.svg` → `swift Scripts/make_icons.swift` → `Design/AppIcon.icns`
-  (copied into the bundle by `build_app.sh`). Layered SVGs for Icon Composer are in `Design/IconComposer/`.
+- App icon "Skuff" (drawer): `Design/AppIcon.svg` → `swift scripts/icon.swift` → `Design/AppIcon.icns`
+  (the asset catalog for Xcode builds, the .icns for `scripts/dev-app.sh`). Layered SVGs for Icon Composer are in `Design/IconComposer/`.
 - Menu bar icon: drawn in code as a template image (`Sources/RyddApp/MenuBarIcon.swift`), so macOS tints it
   for light/dark menu bars. Open drawer with files sticking out = files to tidy (with a count); closed
   cabinet = all tidy.

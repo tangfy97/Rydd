@@ -1,6 +1,8 @@
 import AppKit
 import Foundation
+#if canImport(RyddCore)
 import RyddCore
+#endif
 
 /// One file in the review window. `destination` starts as the engine's suggestion; the user can change it.
 struct Row: Identifiable {
@@ -46,6 +48,7 @@ final class AppModel: ObservableObject {
     private var watchers: [String: DispatchSourceFileSystemObject] = [:]
     private var debounce: Task<Void, Never>?
     private let defaults: UserDefaults
+    let access: FolderAccess
 
     init() {
         // `--home <dir>` points the app at a test fixture instead of the real home folder.
@@ -53,15 +56,16 @@ final class AppModel: ObservableObject {
         if let i = args.firstIndex(of: "--home"), i + 1 < args.count {
             home = URL(fileURLWithPath: (args[i + 1] as NSString).expandingTildeInPath)
             supportDir = home.appendingPathComponent(".rydd-app")
-            defaults = UserDefaults(suiteName: "app.rydd.Rydd.dev")!   // never touch the real settings
+            defaults = UserDefaults(suiteName: "com.feiyangtang.Rydd.fixture")!   // never touch the real settings
         } else {
             defaults = .standard
-            home = URL(fileURLWithPath: NSHomeDirectory())
+            home = FolderAccess.realHome
             supportDir = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
                 .appendingPathComponent("Rydd")
         }
         try? FileManager.default.createDirectory(at: supportDir, withIntermediateDirectories: true)
         mover = FileMover(historyURL: supportDir.appendingPathComponent("history.json"))
+        access = FolderAccess(defaults: defaults)
         lastBatch = mover.history.last
 
         sources = (defaults.stringArray(forKey: "sources") ?? []).map { URL(fileURLWithPath: $0) }
@@ -81,7 +85,7 @@ final class AppModel: ObservableObject {
     /// Whether the welcome window should open at launch (read before the model exists).
     static var needsOnboarding: Bool {
         let devHome = CommandLine.arguments.contains("--home")
-        let d = devHome ? UserDefaults(suiteName: "app.rydd.Rydd.dev")! : .standard
+        let d = devHome ? UserDefaults(suiteName: "com.feiyangtang.Rydd.fixture")! : .standard
         return !d.bool(forKey: "onboarded") || (d.stringArray(forKey: "sources") ?? []).isEmpty
     }
 
@@ -108,7 +112,9 @@ final class AppModel: ObservableObject {
         panel.directoryURL = home
         panel.prompt = String(localized: "Add")
         NSApp.activate()
-        return panel.runModal() == .OK ? panel.urls : []
+        guard panel.runModal() == .OK else { return [] }
+        access.remember(panel.urls)
+        return panel.urls
     }
 
     // MARK: Derived
@@ -168,6 +174,23 @@ final class AppModel: ObservableObject {
 
     func sourceName(_ url: URL) -> String { FileManager.default.displayName(atPath: url.path) }
 
+    // MARK: Access (App Sandbox)
+
+    func canMove(to destination: Destination) -> Bool {
+        switch destination {
+        case .trash: return true
+        case .folder(let url): return access.allows(url)
+        }
+    }
+
+    /// Asks for the home folder; afterwards everything is rescanned with the new access.
+    @discardableResult
+    func requestHomeAccess() -> Bool {
+        let ok = access.requestHome()
+        if ok { objectWillChange.send(); organizer = makeOrganizer(); rescan() }
+        return ok
+    }
+
     // MARK: Sources
 
     func addSource() {
@@ -214,7 +237,9 @@ final class AppModel: ObservableObject {
             .filter { $0.layer != .skip && $0.layer != .userFolder }
             .map { s in
                 if var o = old[s.id], o.edited { o.suggestion = s; return o }
-                let d = s.destination(home: home)
+                var d = s.destination(home: home)
+                // In the sandbox a folder the user hasn't allowed can't be written to: leave it to them.
+                if let dest = d, !canMove(to: dest) { d = nil }
                 return Row(suggestion: s, destination: d, included: d != nil)
             }
     }
@@ -282,7 +307,10 @@ final class AppModel: ObservableObject {
         panel.canCreateDirectories = true
         panel.directoryURL = home.appendingPathComponent("Documents")
         panel.prompt = String(localized: "Move Here")
-        if panel.runModal() == .OK, let url = panel.url { setDestination(.folder(url), for: id) }
+        if panel.runModal() == .OK, let url = panel.url {
+            access.remember([url])
+            setDestination(.folder(url), for: id)
+        }
     }
 
     // MARK: Apply and undo

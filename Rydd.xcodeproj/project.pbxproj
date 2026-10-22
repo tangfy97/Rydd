@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		055BE578A0D460125389FA21 /* Targets.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB2A3BA138739B03FACAD72 /* Targets.swift */; };
+		0A70ECBE14D3663614CF4857 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4697F0EBF204EAE918EBCF /* ReviewView.swift */; };
+		157B7CE70B62AA0A91E3A4EA /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8F8B4E2B54E8A76C1675CA /* Rules.swift */; };
+		1A14756B116254F5FE0A87BA /* LocalLLM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB713125D3AD609E2DAD7CF /* LocalLLM.swift */; };
+		285661FE9B749257B37F5FD6 /* ContentReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE81206C4EF728554859872D /* ContentReader.swift */; };
+		37F113A14B4ABB6244AE3929 /* RyddApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAE9D17CFDC5B312196F086 /* RyddApp.swift */; };
+		3953830054C499FDD9C3F0FB /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 348501291A1B5D0D4621E27C /* PrivacyInfo.xcprivacy */; };
+		3DA4A712FEC7190724491504 /* MenuBarIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABA62832A52B1D7029D732B /* MenuBarIcon.swift */; };
+		3F8F805A3FFFE70464240A66 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC82CA885D8A4422D50A55B4 /* WelcomeView.swift */; };
+		495BB7AACE50049A987BC7BB /* Matcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE43018648D0FED04B934181 /* Matcher.swift */; };
+		5E8E8A0F5A5732BF9448997D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E55B3F0FC378B6A4473DF48 /* SettingsView.swift */; };
+		6A31277131A13C4FB7E42990 /* FolderAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF26E3FB04774DF9FF41A29 /* FolderAccess.swift */; };
+		715F2A11D61F848FC1D54537 /* MenuContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290DAE5053DBF7175AEAE892 /* MenuContent.swift */; };
+		7FC5E043CE1E0479AC66C183 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACE34F4234AFB188A362E6F /* AppModel.swift */; };
+		846FCFE3CB18530389C30FA2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2FE92B6ECB7FA0406B317CF4 /* InfoPlist.strings */; };
+		9E0CF88944E1CC3D6952F96F /* FileMover.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF534203E2AC34BBA835CD27 /* FileMover.swift */; };
+		A38186A4607E0A524CB1CD2B /* PrivacyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B936AE367B62AD64B7855E06 /* PrivacyInfo.swift */; };
+		A425914D0529D28E6858E4AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B80C7C105DD92DE87F7EE06 /* Assets.xcassets */; };
+		A76F6F6BA3B669133DD4C5F3 /* Organizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839D8BA8AE393AF4E2DB812F /* Organizer.swift */; };
+		C80BFFDADD2C9E666A245FD9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE7B92E50AAD51BDEB745CE9 /* Localizable.strings */; };
+		D3BC0E06E50C879099140B1B /* Tokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62C0689E47F2F7BDE61DF4E /* Tokens.swift */; };
+		E26C5500BCD876ADC08B4C87 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5850AE489677946CC9A2F20E /* Localizable.strings */; };
+		EF22520D5578E6448A35FA32 /* FileItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C748351ADA75C2BDF95726 /* FileItem.swift */; };
+		F6E14C9A9D2E3F784E2AF055 /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652B556B079F66C067BD4A21 /* Links.swift */; };
+		FAAF65B078FF117935D1747E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EF342B8036B06686A2FC9BF /* Localizable.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		290DAE5053DBF7175AEAE892 /* MenuContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuContent.swift; sourceTree = "<group>"; };
+		348501291A1B5D0D4621E27C /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		3ACE34F4234AFB188A362E6F /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		3B80C7C105DD92DE87F7EE06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		554E7F85F4BBFC333B78C63B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		5850AE489677946CC9A2F20E /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "en-GB.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		5E55B3F0FC378B6A4473DF48 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		5FB9386B4922383F43B738B6 /* Rydd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rydd.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		652B556B079F66C067BD4A21 /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
+		6C8F8B4E2B54E8A76C1675CA /* Rules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
+		6EF342B8036B06686A2FC9BF /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		72A230A82DBAAAF8921D5251 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		839D8BA8AE393AF4E2DB812F /* Organizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organizer.swift; sourceTree = "<group>"; };
+		8AF26E3FB04774DF9FF41A29 /* FolderAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderAccess.swift; sourceTree = "<group>"; };
+		98C748351ADA75C2BDF95726 /* FileItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileItem.swift; sourceTree = "<group>"; };
+		ABBB3F85A60593E70D25403C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AE43018648D0FED04B934181 /* Matcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matcher.swift; sourceTree = "<group>"; };
+		AEB713125D3AD609E2DAD7CF /* LocalLLM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalLLM.swift; sourceTree = "<group>"; };
+		B62C0689E47F2F7BDE61DF4E /* Tokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tokens.swift; sourceTree = "<group>"; };
+		B936AE367B62AD64B7855E06 /* PrivacyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyInfo.swift; sourceTree = "<group>"; };
+		C6DCFBC717925F9C4066AD5F /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		DC82CA885D8A4422D50A55B4 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		EABA62832A52B1D7029D732B /* MenuBarIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarIcon.swift; sourceTree = "<group>"; };
+		EB4697F0EBF204EAE918EBCF /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
+		EE7B92E50AAD51BDEB745CE9 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		EF534203E2AC34BBA835CD27 /* FileMover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileMover.swift; sourceTree = "<group>"; };
+		FDB2A3BA138739B03FACAD72 /* Targets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Targets.swift; sourceTree = "<group>"; };
+		FE81206C4EF728554859872D /* ContentReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentReader.swift; sourceTree = "<group>"; };
+		FFAE9D17CFDC5B312196F086 /* RyddApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyddApp.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		1567962BBA19BF74723BC67A = {
+			isa = PBXGroup;
+			children = (
+				3013DDA1DA1CD3618AA7E87F /* App */,
+				47916525778BDAFC7F18CDEC /* Resources */,
+				545CE1B7AC483D61236E77C2 /* RyddApp */,
+				FA0622B869B45AF35383D9FD /* RyddCore */,
+				E18E28DB9CDB36DDB160E992 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3013DDA1DA1CD3618AA7E87F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3B80C7C105DD92DE87F7EE06 /* Assets.xcassets */,
+				348501291A1B5D0D4621E27C /* PrivacyInfo.xcprivacy */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		47916525778BDAFC7F18CDEC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5850AE489677946CC9A2F20E /* Localizable.strings */,
+				6EF342B8036B06686A2FC9BF /* Localizable.strings */,
+				EE7B92E50AAD51BDEB745CE9 /* Localizable.strings */,
+				2FE92B6ECB7FA0406B317CF4 /* InfoPlist.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		545CE1B7AC483D61236E77C2 /* RyddApp */ = {
+			isa = PBXGroup;
+			children = (
+				3ACE34F4234AFB188A362E6F /* AppModel.swift */,
+				8AF26E3FB04774DF9FF41A29 /* FolderAccess.swift */,
+				652B556B079F66C067BD4A21 /* Links.swift */,
+				EABA62832A52B1D7029D732B /* MenuBarIcon.swift */,
+				290DAE5053DBF7175AEAE892 /* MenuContent.swift */,
+				B936AE367B62AD64B7855E06 /* PrivacyInfo.swift */,
+				EB4697F0EBF204EAE918EBCF /* ReviewView.swift */,
+				FFAE9D17CFDC5B312196F086 /* RyddApp.swift */,
+				5E55B3F0FC378B6A4473DF48 /* SettingsView.swift */,
+				DC82CA885D8A4422D50A55B4 /* WelcomeView.swift */,
+			);
+			name = RyddApp;
+			path = Sources/RyddApp;
+			sourceTree = "<group>";
+		};
+		E18E28DB9CDB36DDB160E992 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5FB9386B4922383F43B738B6 /* Rydd.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA0622B869B45AF35383D9FD /* RyddCore */ = {
+			isa = PBXGroup;
+			children = (
+				FE81206C4EF728554859872D /* ContentReader.swift */,
+				98C748351ADA75C2BDF95726 /* FileItem.swift */,
+				EF534203E2AC34BBA835CD27 /* FileMover.swift */,
+				AEB713125D3AD609E2DAD7CF /* LocalLLM.swift */,
+				AE43018648D0FED04B934181 /* Matcher.swift */,
+				839D8BA8AE393AF4E2DB812F /* Organizer.swift */,
+				6C8F8B4E2B54E8A76C1675CA /* Rules.swift */,
+				FDB2A3BA138739B03FACAD72 /* Targets.swift */,
+				B62C0689E47F2F7BDE61DF4E /* Tokens.swift */,
+			);
+			name = RyddCore;
+			path = Sources/RyddCore;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4283953B2C59CCAFBAB25E52 /* Rydd */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CF52565FF165A839DC31047 /* Build configuration list for PBXNativeTarget "Rydd" */;
+			buildPhases = (
+				D4FB162C010B877468BCD28F /* Sources */,
+				9C2594DA2A204B69FD0E5B3A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rydd;
+			packageProductDependencies = (
+			);
+			productName = Rydd;
+			productReference = 5FB9386B4922383F43B738B6 /* Rydd.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		91FDE4124EE196AEF7021048 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					4283953B2C59CCAFBAB25E52 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 34331CD4D9950C6A0F95ADF1 /* Build configuration list for PBXProject "Rydd" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+				"en-GB",
+				"zh-Hans",
+				"zh-Hant",
+			);
+			mainGroup = 1567962BBA19BF74723BC67A;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = E18E28DB9CDB36DDB160E992 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4283953B2C59CCAFBAB25E52 /* Rydd */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9C2594DA2A204B69FD0E5B3A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A425914D0529D28E6858E4AB /* Assets.xcassets in Resources */,
+				846FCFE3CB18530389C30FA2 /* InfoPlist.strings in Resources */,
+				FAAF65B078FF117935D1747E /* Localizable.strings in Resources */,
+				E26C5500BCD876ADC08B4C87 /* Localizable.strings in Resources */,
+				C80BFFDADD2C9E666A245FD9 /* Localizable.strings in Resources */,
+				3953830054C499FDD9C3F0FB /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4FB162C010B877468BCD28F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FC5E043CE1E0479AC66C183 /* AppModel.swift in Sources */,
+				285661FE9B749257B37F5FD6 /* ContentReader.swift in Sources */,
+				EF22520D5578E6448A35FA32 /* FileItem.swift in Sources */,
+				9E0CF88944E1CC3D6952F96F /* FileMover.swift in Sources */,
+				6A31277131A13C4FB7E42990 /* FolderAccess.swift in Sources */,
+				F6E14C9A9D2E3F784E2AF055 /* Links.swift in Sources */,
+				1A14756B116254F5FE0A87BA /* LocalLLM.swift in Sources */,
+				495BB7AACE50049A987BC7BB /* Matcher.swift in Sources */,
+				3DA4A712FEC7190724491504 /* MenuBarIcon.swift in Sources */,
+				715F2A11D61F848FC1D54537 /* MenuContent.swift in Sources */,
+				A76F6F6BA3B669133DD4C5F3 /* Organizer.swift in Sources */,
+				A38186A4607E0A524CB1CD2B /* PrivacyInfo.swift in Sources */,
+				0A70ECBE14D3663614CF4857 /* ReviewView.swift in Sources */,
+				157B7CE70B62AA0A91E3A4EA /* Rules.swift in Sources */,
+				37F113A14B4ABB6244AE3929 /* RyddApp.swift in Sources */,
+				5E8E8A0F5A5732BF9448997D /* SettingsView.swift in Sources */,
+				055BE578A0D460125389FA21 /* Targets.swift in Sources */,
+				D3BC0E06E50C879099140B1B /* Tokens.swift in Sources */,
+				3F8F805A3FFFE70464240A66 /* WelcomeView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2FE92B6ECB7FA0406B317CF4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABBB3F85A60593E70D25403C /* en */,
+				72A230A82DBAAAF8921D5251 /* en-GB */,
+				554E7F85F4BBFC333B78C63B /* zh-Hans */,
+				C6DCFBC717925F9C4066AD5F /* zh-Hant */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2F8EE743BD3F1AA4EE250956 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		43D6EDC98910549F1942DEEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		6C4BA8CA2AAB3F4F455723FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = App/Rydd.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readwrite;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Rydd;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 TangSpark. Apache License 2.0.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.feiyangtang.Rydd;
+				PRODUCT_NAME = Rydd;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		84107A889638C26E81DA2DC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = App/Rydd.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readwrite;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Rydd;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 TangSpark. Apache License 2.0.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.feiyangtang.Rydd;
+				PRODUCT_NAME = Rydd;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C66B4B184F5E0E73FCE8F18D /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = App/Rydd.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readwrite;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Rydd;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 TangSpark. Apache License 2.0.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.feiyangtang.Rydd;
+				PRODUCT_NAME = Rydd;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = APPSTORE;
+			};
+			name = AppStore;
+		};
+		DE641B8947505E8A652C4358 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = AppStore;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		34331CD4D9950C6A0F95ADF1 /* Build configuration list for PBXProject "Rydd" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE641B8947505E8A652C4358 /* AppStore */,
+				2F8EE743BD3F1AA4EE250956 /* Debug */,
+				43D6EDC98910549F1942DEEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = AppStore;
+		};
+		9CF52565FF165A839DC31047 /* Build configuration list for PBXNativeTarget "Rydd" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C66B4B184F5E0E73FCE8F18D /* AppStore */,
+				84107A889638C26E81DA2DC3 /* Debug */,
+				6C4BA8CA2AAB3F4F455723FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = AppStore;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 91FDE4124EE196AEF7021048 /* Project object */;
+}

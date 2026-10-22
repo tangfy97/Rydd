@@ -13,7 +13,7 @@ let package = Package(
         .target(name: "RyddCore", path: "Sources/RyddCore"),
         // Command-line preview / evaluation tool.
         .executableTarget(name: "rydd", dependencies: ["RyddCore"], path: "Sources/rydd"),
-        // Menu bar app. Packaged into Rydd.app by Scripts/build_app.sh.
+        // Menu bar app, unsandboxed for development (scripts/dev-app.sh). Shipping builds come from project.yml.
         .executableTarget(name: "RyddApp", dependencies: ["RyddCore"], path: "Sources/RyddApp"),
     ],
     swiftLanguageModes: [.v5]

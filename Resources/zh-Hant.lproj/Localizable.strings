@@ -1,0 +1,87 @@
+/* Menu bar menu */
+"Review ^[%lld File](inflect: true)…" = "檢視 %lld 個檔案…";
+"Review…" = "檢視…";
+"Undo Last Tidy" = "還原上次整理";
+"Scanning…" = "正在掃描…";
+"Rescan" = "重新掃描";
+"Set Up Rydd…" = "設定 Rydd…";
+"Settings…" = "設定…";
+"Quit Rydd" = "結束 Rydd";
+"Rydd: files to tidy" = "Rydd：有檔案待整理";
+
+/* Review window */
+"^[%lld File](inflect: true) to Tidy" = "%lld 個檔案待整理";
+"Name" = "名稱";
+"Move To" = "移到";
+"Tidy ^[%lld File](inflect: true)" = "整理 %lld 個檔案";
+"Tidy" = "整理";
+"Nothing to Tidy" = "沒有需要整理的檔案";
+"Recent files wait a few days." = "新檔案會過幾天再整理。";
+"Choose…" = "選擇…";
+"Other Folder…" = "其他檔案夾…";
+"Move to Trash" = "丟到垃圾桶";
+"Don't Tidy" = "不整理";
+"Show in Finder" = "在 Finder 中顯示";
+"Some files couldn't be moved." = "有些檔案無法移動。";
+"OK" = "好";
+"Applications" = "應用程式";
+"Trash" = "垃圾桶";
+"Unsorted" = "未分類";
+"Move Here" = "移到這裡";
+
+/* Settings */
+"General" = "一般";
+"Folders" = "檔案夾";
+"Open at Login" = "登入時開啟";
+"Wait Before Tidying" = "整理前等待";
+"Right Away" = "不等待";
+"1 Day" = "1 天";
+"3 Days" = "3 天";
+"1 Week" = "1 週";
+"Sort with Apple Intelligence" = "使用 Apple Intelligence 分類";
+"Read File Contents" = "讀取檔案內容";
+"Add Folder…" = "加入檔案夾…";
+"Add" = "加入";
+"Remove" = "移除";
+"This Mac doesn't support Apple Intelligence" = "這部 Mac 不支援 Apple Intelligence";
+"Apple Intelligence is turned off" = "Apple Intelligence 未開啟";
+"The on-device model isn't ready yet" = "裝置端模型尚未就緒";
+"The on-device model isn't available" = "裝置端模型無法使用";
+
+/* Welcome */
+"Welcome to Rydd" = "歡迎使用 Rydd";
+"Rydd keeps the folders you choose tidy. Everything happens on your Mac." = "Rydd 會讓你選擇的檔案夾保持整潔。所有處理都在你的 Mac 上完成。";
+"Choose Folders" = "選擇檔案夾";
+"Rydd only looks at the folders you choose." = "Rydd 只會查看你選擇的檔案夾。";
+"Back" = "返回";
+"Continue" = "繼續";
+"Rydd Is in the Menu Bar" = "Rydd 在選單列中";
+"Click the drawer in the menu bar to review and tidy your files." = "按一下選單列中的抽屜圖像，即可檢視並整理檔案。";
+"Start" = "開始";
+
+/* Privacy */
+"Privacy" = "隱私";
+"Private by Design" = "隱私保護";
+"Rydd uses Apple's on-device model. It works offline." = "Rydd 使用 Apple 裝置端模型，可離線運作。";
+"The model only sees file and folder names." = "模型只會看到檔案名稱和檔案夾名稱。";
+"Nothing leaves your Mac. Rydd never connects to the internet." = "所有內容都留在你的 Mac 上，Rydd 從不連網。";
+"Files are read on this Mac only, and only when their names aren't enough." = "檔案只在這部 Mac 上讀取，且僅在檔案名稱不足以判斷時才讀取。";
+"Nothing is uploaded or stored." = "內容不會被上傳，也不會被儲存。";
+
+/* About */
+"About Rydd" = "關於 Rydd";
+"Free. Works offline. Nothing leaves your Mac." = "免費 · 離線運作 · 所有內容都留在你的 Mac 上";
+
+/* Access (App Sandbox) */
+"Allow" = "允許";
+"Click Allow to let Rydd tidy and file things in your home folder." = "按一下「允許」，讓 Rydd 在你的個人專屬檔案夾中整理和歸檔檔案。";
+"Allow Access" = "允許取用";
+"macOS asks you to confirm which folders Rydd may use. Choose your home folder so Rydd can tidy the folders you picked and file things into your folders." = "macOS 需要你確認 Rydd 可以使用哪些檔案夾。選擇你的個人專屬檔案夾，Rydd 才能整理你選取的檔案夾，並把檔案歸入你的檔案夾。";
+"Access Allowed" = "已允許取用";
+"Allow Access…" = "允許取用…";
+"Rydd can use your home folder." = "Rydd 可以使用你的個人專屬檔案夾。";
+"Rydd can use only the folders you added." = "Rydd 只能使用你加入的檔案夾。";
+
+/* Help */
+"Check for Updates…" = "檢查更新項目…";
+"Rydd Help" = "Rydd 輔助說明";

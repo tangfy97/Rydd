@@ -16,6 +16,9 @@ struct MenuContent: View {
                                                           .foregroundColor: NSColor.secondaryLabelColor]),
             ])
         }
+        #if !APPSTORE
+        Button("Check for Updates…") { NSWorkspace.shared.open(Links.newVersion) }
+        #endif
         Divider()
         if model.onboarded {
             Button(model.pendingCount > 0 ? "Review ^[\(model.pendingCount) File](inflect: true)…" : "Review…") {
@@ -40,6 +43,7 @@ struct MenuContent: View {
         }
         .keyboardShortcut(",")
         .disabled(!model.onboarded)
+        Button("Rydd Help") { NSWorkspace.shared.open(Links.support) }
         Divider()
         Button("Quit Rydd") { NSApp.terminate(nil) }
             .keyboardShortcut("q")

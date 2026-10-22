@@ -4,7 +4,8 @@
 
 ## Checks
 
-- [ ] `swift build -c release` and `Scripts/build_app.sh` succeed
+- [ ] `scripts/build.sh` succeeds
+- [ ] `scripts/preflight.sh` passes
 - [ ] Suggestions checked against a fixture (`Fixtures/make_fixture.py` + `rydd --expect`), if this touches sorting
 - [ ] Screenshot, if this changes anything visible
 - [ ] New interface text is in every file in `Resources/*.lproj`

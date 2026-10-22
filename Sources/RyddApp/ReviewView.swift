@@ -1,5 +1,7 @@
 import AppKit
+#if canImport(RyddCore)
 import RyddCore
+#endif
 import SwiftUI
 
 /// Every suggestion in a standard table: tick, name, where it goes. Nothing moves before "Tidy".

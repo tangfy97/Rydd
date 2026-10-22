@@ -71,3 +71,17 @@
 /* About */
 "About Rydd" = "关于 Rydd";
 "Free. Works offline. Nothing leaves your Mac." = "免费 · 离线运行 · 所有内容都留在你的 Mac 上";
+
+/* Access (App Sandbox) */
+"Allow" = "允许";
+"Click Allow to let Rydd tidy and file things in your home folder." = "点按“允许”，让 Rydd 在你的个人文件夹中整理和归档文件。";
+"Allow Access" = "允许访问";
+"macOS asks you to confirm which folders Rydd may use. Choose your home folder so Rydd can tidy the folders you picked and file things into your folders." = "macOS 需要你确认 Rydd 可以使用哪些文件夹。选择你的个人文件夹，Rydd 才能整理你选中的文件夹，并把文件归入你的文件夹。";
+"Access Allowed" = "已允许访问";
+"Allow Access…" = "允许访问…";
+"Rydd can use your home folder." = "Rydd 可以使用你的个人文件夹。";
+"Rydd can use only the folders you added." = "Rydd 只能使用你添加的文件夹。";
+
+/* Help */
+"Check for Updates…" = "检查更新…";
+"Rydd Help" = "Rydd 帮助";

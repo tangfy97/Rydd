@@ -1,0 +1,3 @@
+/* British English: macOS calls the Trash the Bin. Everything else falls back to the English keys. */
+"Move to Trash" = "Move to Bin";
+"Trash" = "Bin";

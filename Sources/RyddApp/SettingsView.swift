@@ -98,6 +98,19 @@ private struct FolderSettings: View {
             }
             .buttonStyle(.borderless)
             .padding(.top, 4)
+
+            if FolderAccess.isSandboxed {
+                Divider().padding(.vertical, 14)
+                HStack {
+                    Label(model.access.hasHome ? "Rydd can use your home folder." : "Rydd can use only the folders you added.",
+                          systemImage: model.access.hasHome ? "lock.open" : "lock")
+                        .foregroundStyle(.secondary)
+                    Spacer()
+                    if !model.access.hasHome {
+                        Button("Allow Access…") { model.requestHomeAccess() }
+                    }
+                }
+            }
         }
         .padding(20)
     }

@@ -9,6 +9,7 @@ struct WelcomeView: View {
     @Environment(\.dismissWindow) private var dismissWindow
 
     @State private var step = 0
+    @State private var accessGranted = false
     @State private var candidates: [URL] = []
     @State private var chosen: Set<URL> = []
     @State private var useAI = true
@@ -16,10 +17,11 @@ struct WelcomeView: View {
     var body: some View {
         VStack(spacing: 0) {
             Group {
-                switch step {
-                case 0: welcome
-                case 1: folders
-                default: menuBar
+                switch steps[step] {
+                case .welcome: welcome
+                case .folders: folders
+                case .access: access
+                case .menuBar: menuBar
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -36,16 +38,46 @@ struct WelcomeView: View {
         .onAppear {
             candidates = model.suggestedSources
             useAI = model.llmUnavailable == nil
+            accessGranted = model.access.hasHome
             // Development aid: `--welcome-step N` opens on step N (for screenshots).
             let args = CommandLine.arguments
             if let i = args.firstIndex(of: "--welcome-step"), i + 1 < args.count, let n = Int(args[i + 1]) {
-                step = n
+                step = min(n, steps.count - 1)
                 if n > 0 { chosen = Set(candidates.prefix(1)) }
             }
         }
     }
 
     // MARK: Steps
+
+    private enum Step { case welcome, folders, access, menuBar }
+
+    /// The App Sandbox build asks for folder access; the development build doesn't need to.
+    private var steps: [Step] {
+        FolderAccess.isSandboxed ? [.welcome, .folders, .access, .menuBar] : [.welcome, .folders, .menuBar]
+    }
+
+    private var access: some View {
+        VStack(spacing: 12) {
+            Image(systemName: accessGranted ? "lock.open" : "lock")
+                .font(.system(size: 44, weight: .light))
+                .foregroundStyle(.secondary)
+                .padding(.bottom, 4)
+            Text("Allow Access").font(.title.bold())
+            Text("macOS asks you to confirm which folders Rydd may use. Choose your home folder so Rydd can tidy the folders you picked and file things into your folders.")
+                .multilineTextAlignment(.center)
+                .foregroundStyle(.secondary)
+                .frame(maxWidth: 360)
+            if accessGranted {
+                Label("Access Allowed", systemImage: "checkmark.circle.fill")
+                    .foregroundStyle(.green)
+                    .padding(.top, 8)
+            } else {
+                Button("Allow Access…") { accessGranted = model.access.requestHome() }
+                    .padding(.top, 8)
+            }
+        }
+    }
 
     private var welcome: some View {
         VStack(spacing: 12) {
@@ -114,12 +146,14 @@ struct WelcomeView: View {
     }
 
     @ViewBuilder private var primary: some View {
-        switch step {
-        case 0:
-            Button("Continue") { step = 1 }
-        case 1:
-            Button("Continue") { step = 2 }.disabled(chosen.isEmpty)
-        default:
+        switch steps[step] {
+        case .welcome:
+            Button("Continue") { step += 1 }
+        case .folders:
+            Button("Continue") { step += 1 }.disabled(chosen.isEmpty)
+        case .access:
+            Button("Continue") { step += 1 }.disabled(!accessGranted)
+        case .menuBar:
             Button("Start") {
                 model.finishOnboarding(sources: candidates.filter(chosen.contains), useLLM: useAI)
                 openWindow(id: ReviewView.windowID)

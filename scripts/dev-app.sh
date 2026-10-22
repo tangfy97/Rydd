@@ -1,15 +1,17 @@
 #!/bin/zsh
-# Builds build/Rydd.app from the RyddApp SwiftPM product (menu bar only, ad-hoc signed).
+# Builds build/dev/Rydd.app from the RyddApp SwiftPM product (menu bar only, ad-hoc signed).
 #
-#   Scripts/build_app.sh            # then: open build/Rydd.app
-#   open build/Rydd.app --args --home /path/to/fixture   # point it at a test folder instead of ~
+#   scripts/dev-app.sh              # then: open build/dev/Rydd.app
+#   open build/dev/Rydd.app --args --home /path/to/fixture   # point it at a test folder instead of ~
 set -e
 cd "${0:A:h}/.."
+# Development build from the Swift package: unsandboxed and ad-hoc signed, with the `--home <dir>`
+# test flags. For the shipping builds see scripts/build.sh, scripts/release.sh and scripts/appstore.sh.
 
 swift build -c release --product RyddApp
-app=build/Rydd.app
+app=build/dev/Rydd.app
 rm -rf $app
-mkdir -p $app/Contents/MacOS $app/Contents/Resources
+mkdir -p build/dev $app/Contents/MacOS $app/Contents/Resources
 cp .build/release/RyddApp $app/Contents/MacOS/Rydd
 cp Design/AppIcon.icns $app/Contents/Resources/AppIcon.icns
 cp -R Resources/*.lproj $app/Contents/Resources/
@@ -21,9 +23,9 @@ cat > $app/Contents/Info.plist <<'PLIST'
 <dict>
     <key>CFBundleName</key>                 <string>Rydd</string>
     <key>CFBundleDevelopmentRegion</key>    <string>en</string>
-    <key>CFBundleLocalizations</key>        <array><string>en</string><string>zh-Hans</string></array>
+    <key>CFBundleLocalizations</key>        <array><string>en</string><string>en-GB</string><string>zh-Hans</string><string>zh-Hant</string></array>
     <key>CFBundleDisplayName</key>          <string>Rydd</string>
-    <key>CFBundleIdentifier</key>           <string>app.rydd.Rydd</string>
+    <key>CFBundleIdentifier</key>           <string>com.feiyangtang.Rydd.dev</string>
     <key>CFBundleExecutable</key>           <string>Rydd</string>
     <key>CFBundleIconFile</key>             <string>AppIcon</string>
     <key>CFBundlePackageType</key>          <string>APPL</string>
