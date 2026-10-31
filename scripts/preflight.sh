@@ -58,6 +58,11 @@ for config in Release AppStore; do
   [[ $entitlements == *com.apple.security.app-sandbox* ]] && pass "App Sandbox on" || fail "App Sandbox off"
   [[ $entitlements != *com.apple.security.network* ]] && pass "no network entitlement" || fail "has a network entitlement"
   [[ $entitlements != *com.apple.security.temporary-exception* ]] && pass "no temporary exceptions" || fail "has temporary exceptions"
+  # App Review (2.4.5) rejects entitlements without matching functionality, so allow exactly these.
+  # (get-task-allow comes from local signing and is stripped when the archive is exported.)
+  granted=$(grep -o 'com\.apple\.security\.[a-z.-]*' <<< "$entitlements" | grep -v get-task-allow | sort -u | tr '\n' ' ')
+  expected="com.apple.security.app-sandbox com.apple.security.files.bookmarks.app-scope com.apple.security.files.user-selected.read-write "
+  [[ $granted == "$expected" ]] && pass "only the entitlements Rydd uses" || fail "unexpected entitlements: $granted"
   hardened=$(codesign -d --verbose=2 $app 2>&1 | grep -c "runtime")
   [[ $hardened -gt 0 ]] && pass "hardened runtime" || fail "hardened runtime off"
 

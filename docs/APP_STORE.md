@@ -181,7 +181,7 @@ Rydd 需要 macOS 26 Tahoe；使用 Apple Intelligence 分類需要開啟 Apple 
 >
 > To try it: on first launch a short welcome window asks which folders to tidy, then asks the user to allow access to their home folder in a standard Open panel (click Allow). Rydd then appears in the menu bar as a drawer icon. Choose Review… to see the suggestions in a table, tick files, and click Tidy. Undo Last Tidy puts them back. New files wait three days by default; set Settings › General › Wait Before Tidying to Right Away to see suggestions for files just added to Downloads.
 >
-> It runs in the App Sandbox with user-selected read-write access, app-scoped bookmarks (to keep the folders the user allowed across launches) and read-write access to Downloads. "Sort with Apple Intelligence" uses the on-device Foundation Models framework (SystemLanguageModel) only; file contents are read only if the user turns on "Read File Contents". Nothing is sent anywhere.
+> It runs in the App Sandbox with user-selected read-write access, and app-scoped bookmarks (to keep the folders the user allowed across launches); it has no other entitlements, so Downloads is reached through the home folder the user allows. "Sort with Apple Intelligence" uses the on-device Foundation Models framework (SystemLanguageModel) only; file contents are read only if the user turns on "Read File Contents". Nothing is sent anywhere.
 >
 > The menu's Rydd Help link opens the support page in the browser.
 

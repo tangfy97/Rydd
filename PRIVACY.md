@@ -8,7 +8,7 @@ Rydd is a macOS menu bar app that keeps the folders you choose tidy, made by Tan
 
 What Rydd does on your Mac:
 
-- It uses only the folders you allow in an Open panel (and Downloads), and tidies only the ones you choose, such as Downloads and Desktop.
+- It uses only the folders you allow in an Open panel, and tidies only the ones you choose, such as Downloads and Desktop.
 - It reads the names of the files there, and basic details such as their size, dates and the website a download came from.
 - To know where files belong, it reads the names of your folders and of the files inside them.
 - If you turn on **Sort with Apple Intelligence**, file and folder names are given to Apple's on-device language model on your Mac. Rydd never uses Apple's cloud model. This works offline.

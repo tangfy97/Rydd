@@ -73,7 +73,10 @@ struct WelcomeView: View {
                     .foregroundStyle(.green)
                     .padding(.top, 8)
             } else {
-                Button("Allow Access…") { accessGranted = model.access.requestHome() }
+                Button("Allow Access…") {
+                    // Narrower folders are fine as long as they cover every folder chosen to tidy.
+                    accessGranted = model.access.requestHome() && chosen.allSatisfy(model.access.allows)
+                }
                     .padding(.top, 8)
             }
         }

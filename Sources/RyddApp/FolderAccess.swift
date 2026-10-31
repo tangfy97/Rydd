@@ -1,8 +1,8 @@
 import AppKit
 import Foundation
 
-/// Folder access in the App Sandbox. Downloads comes with an entitlement; every other folder has to
-/// be chosen once by the user in an open panel. Those choices are kept as app-scoped security-scoped
+/// Folder access in the App Sandbox. Every folder, Downloads included, has to be chosen once by the
+/// user in an open panel (the welcome window asks for the home folder, which covers them all). Those choices are kept as app-scoped security-scoped
 /// bookmarks, so Rydd can use the same folders again after a restart. Outside the sandbox (the
 /// development build) everything is accessible and this keeps nothing.
 @MainActor
@@ -50,8 +50,7 @@ final class FolderAccess {
     func allows(_ url: URL) -> Bool {
         guard Self.isSandboxed else { return true }
         let path = url.standardizedFileURL.path
-        let downloads = Self.realHome.appendingPathComponent("Downloads").path
-        return ([downloads] + granted.map(\.standardizedFileURL.path)).contains {
+        return granted.map(\.standardizedFileURL.path).contains {
             path == $0 || path.hasPrefix($0 + "/")
         }
     }

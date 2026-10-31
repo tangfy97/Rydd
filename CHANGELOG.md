@@ -4,6 +4,8 @@ All notable changes to Rydd are listed here. Versions follow [Semantic Versionin
 
 ## [1.0.0] - 2026-10-22
 
+Build 2 (2026-10-31), for the Mac App Store: drops the Downloads entitlement, which App Review flagged as unused; Downloads is reached through the home folder you allow in the welcome window. The welcome window now continues only once every folder you chose is covered.
+
 The first release, the free basic version, for the Mac App Store and as a download from tang-spark.no.
 
 - A menu bar app that tidies the folders you choose, such as Downloads and Desktop.
