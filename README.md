@@ -32,7 +32,7 @@ scripts/dev-app.sh        # unsandboxed development build from the Swift package
 |---|---|
 | `scripts/release.sh` | Website build: Developer ID, notarized, as a DMG and zip in `build/release` |
 | `scripts/appstore.sh` | App Store build: signed installer package, and `upload` sends it to App Store Connect |
-| `scripts/publish-website.sh` | Copies the pages (and a notarized disk image) into the tang-spark.no site |
+| `scripts/publish-website.sh` | Copies the pages into the tang-spark.no site (no installers; downloads are GitHub releases) |
 | `scripts/icon.swift` | Renders `Design/AppIcon.svg` into the asset catalog |
 | `scripts/storeshot.swift` | App Store screenshot composition |
 | `Fixtures/make_fixture.py` | Test folders with expected answers for `rydd --expect` |

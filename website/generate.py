@@ -5,10 +5,9 @@
 
 The pages use the site's own styles.css (the Plakat layout shared with Kvikkshot and Glimt).
 The version comes from project.yml. Set APP_STORE_URL once the app is live to show the
-Mac App Store button; the download button appears when publish-website.sh copies a notarized disk image.
+Mac App Store button. Downloads are GitHub releases; the site hosts no installers.
 """
 import html
-import os
 import pathlib
 import re
 
@@ -16,9 +15,8 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 DIST = ROOT / "website" / "dist"
 VERSION = re.search(r'MARKETING_VERSION: "([^"]+)"', (ROOT / "project.yml").read_text()).group(1)
 APP_STORE_URL = ""
-# scripts/publish-website.sh sets this when it copies a notarized disk image to the site.
-DOWNLOAD_URL = os.environ.get("RYDD_DOWNLOAD_URL", "")
 GITHUB = "https://github.com/tangfy97/Rydd"
+DOWNLOAD_URL = f"{GITHUB}/releases/latest"
 
 LANGS = {
     "en": {"suffix": "", "html": "en", "other": [("zh-cn", "中文")]},
@@ -46,7 +44,7 @@ COPY = {
         "get": "Get Rydd",
         "get_text_store": "Free on the Mac App Store, and as a signed, notarized download.",
         "get_text_soon": "Free and open source. Coming soon to the Mac App Store; until then, Rydd can be built from the source on GitHub.",
-        "btn_store": "Mac App Store", "btn_download": "Download for Mac", "btn_source": "Source on GitHub", "btn_support": "Support & privacy",
+        "btn_store": "Mac App Store", "btn_download": "Download from GitHub", "btn_source": "Source on GitHub", "btn_support": "Support & privacy",
         "nav_apps": "Apps", "nav_support": "Support",
         # support page
         "s_title": "Rydd support, privacy and terms",
@@ -72,7 +70,7 @@ COPY = {
         ],
         "privacy_title": "Privacy policy",
         "privacy": [
-            "Last updated 22 October 2026. This policy covers the Mac App Store version and the version downloaded from this website.",
+            "Last updated 22 October 2026. This policy covers the Mac App Store version and the version downloaded from GitHub.",
             "<b>Rydd collects no data.</b> It has no network access: the App Sandbox does not let it connect to the internet. There are no accounts, analytics, telemetry, crash reporting, advertising or update checks, and no third-party code.",
             "Rydd uses only the folders you allow, and tidies only the ones you choose. It reads the names of files and folders and basic details such as size, dates and the website a download came from. If you turn on Sort with Apple Intelligence, those names are given to Apple's on-device model on your Mac; Rydd never uses Apple's cloud model. File contents are read only if you turn on Read File Contents, only when a name isn't enough, and are never saved.",
             "Rydd moves files only after you confirm. In its own container it keeps your settings, the folders you allowed, short descriptions of your folders made from their names, and the list of recent moves so they can be undone. All of this stays on your Mac.",
@@ -110,7 +108,7 @@ COPY = {
         "get": "获取 Rydd",
         "get_text_store": "可在 Mac App Store 免费获取，也可以下载经过签名和公证的版本。",
         "get_text_soon": "免费、开源。即将登陆 Mac App Store；在那之前，可以从 GitHub 上的源代码构建。",
-        "btn_store": "Mac App Store", "btn_download": "下载 Mac 版", "btn_source": "GitHub 源代码", "btn_support": "支持与隐私",
+        "btn_store": "Mac App Store", "btn_download": "从 GitHub 下载", "btn_source": "GitHub 源代码", "btn_support": "支持与隐私",
         "nav_apps": "Apps", "nav_support": "支持",
         "s_title": "Rydd 支持、隐私与条款",
         "s_hero": "支持",
@@ -135,7 +133,7 @@ COPY = {
         ],
         "privacy_title": "隐私政策",
         "privacy": [
-            "最后更新：2026 年 10 月 22 日。本政策适用于 Mac App Store 版本和从本网站下载的版本。",
+            "最后更新：2026 年 10 月 22 日。本政策适用于 Mac App Store 版本和从 GitHub 下载的版本。",
             "<b>Rydd 不收集任何数据。</b>它完全没有网络权限：App 沙盒不允许它连接互联网。没有账号、统计、遥测、崩溃报告、广告或更新检查，也没有任何第三方代码。",
             "Rydd 只使用你允许的文件夹，只整理你选择的文件夹。它读取文件和文件夹的名字，以及大小、日期、下载来源网站等基本信息。打开“使用 Apple 智能归类”后，这些名字会交给你 Mac 上的 Apple 设备端模型；Rydd 从不使用 Apple 的云端模型。只有打开“读取文件内容”后才会读取文件内容，且只在名字不足以判断时读取，从不保存。",
             "Rydd 只在你确认后才移动文件。在它自己的容器中，它保存你的设置、你允许的文件夹、根据名字生成的文件夹简短描述，以及最近的移动记录（用于撤销）。这些都留在你的 Mac 上。",
@@ -173,7 +171,7 @@ COPY = {
         "get": "取得 Rydd",
         "get_text_store": "可在 Mac App Store 免費取得，也可以下載經過簽署和公證的版本。",
         "get_text_soon": "免費、開源。即將登上 Mac App Store；在那之前，可以從 GitHub 上的原始碼建置。",
-        "btn_store": "Mac App Store", "btn_download": "下載 Mac 版", "btn_source": "GitHub 原始碼", "btn_support": "支援與隱私",
+        "btn_store": "Mac App Store", "btn_download": "從 GitHub 下載", "btn_source": "GitHub 原始碼", "btn_support": "支援與隱私",
         "nav_apps": "Apps", "nav_support": "支援",
         "s_title": "Rydd 支援、隱私與條款",
         "s_hero": "支援",
@@ -198,7 +196,7 @@ COPY = {
         ],
         "privacy_title": "隱私權政策",
         "privacy": [
-            "最後更新：2026 年 10 月 22 日。本政策適用於 Mac App Store 版本和從本網站下載的版本。",
+            "最後更新：2026 年 10 月 22 日。本政策適用於 Mac App Store 版本和從 GitHub 下載的版本。",
             "<b>Rydd 不收集任何資料。</b>它完全沒有網路權限：App 沙盒不允許它連上網際網路。沒有帳號、統計、遙測、當機報告、廣告或更新檢查，也沒有任何第三方程式碼。",
             "Rydd 只使用你允許的檔案夾，只整理你選擇的檔案夾。它讀取檔案和檔案夾的名稱，以及大小、日期、下載來源網站等基本資訊。開啟「使用 Apple Intelligence 分類」後，這些名稱會交給你 Mac 上的 Apple 裝置端模型；Rydd 從不使用 Apple 的雲端模型。只有開啟「讀取檔案內容」後才會讀取檔案內容，且只在名稱不足以判斷時讀取，從不儲存。",
             "Rydd 只在你確認後才移動檔案。在它自己的容器中，它會保存你的設定、你允許的檔案夾、依名稱產生的檔案夾簡短描述，以及最近的移動記錄（用於還原）。這些都留在你的 Mac 上。",

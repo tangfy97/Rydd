@@ -2,7 +2,7 @@
 
 *Last updated: 22 October 2026*
 
-Rydd is a macOS menu bar app that keeps the folders you choose tidy, made by TangSpark. This policy covers every version of Rydd: the Mac App Store version and the one downloaded from tang-spark.no.
+Rydd is a macOS menu bar app that keeps the folders you choose tidy, made by TangSpark. This policy covers every version of Rydd: the Mac App Store version and the one downloaded from GitHub.
 
 **Rydd collects no data.** It has no network access at all; the operating system's App Sandbox does not allow it to connect to the internet, and its code contains no networking. There are no accounts, analytics, telemetry, crash reporting, advertising or update checks, and no third-party code.
 
