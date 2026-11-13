@@ -6,7 +6,7 @@ The product and support pages live in the [tang-spark.no](https://github.com/tan
 |---|---|
 | Product (EN, 简体, 繁體) | `/rydd.html`, `/rydd-zh-cn.html`, `/rydd-zh-tw.html` |
 | Support, privacy, terms | `/rydd-support.html` (+ `-zh-cn`, `-zh-tw`); privacy is `#privacy` |
-| Latest disk image | `/rydd/download`, a redirect to `/downloads/Rydd-<version>.dmg` (once there is one) |
+| Download | `https://github.com/tangfy97/Rydd/releases/latest`; the site hosts no installers, and its `netlify.toml` redirects the old `/rydd/download` links there |
 
 The app's menu links to the support page in the language it runs in ([Links.swift](../Sources/RyddApp/Links.swift)). In the downloaded version, Check for Updates… opens the product page with `?installed=<version>`.
 
@@ -19,12 +19,14 @@ The app's menu links to the support page in the language it runs in ([Links.swif
 ## Publishing
 
 ```bash
-scripts/release.sh                                  # optional: notarized build/release/Rydd-<version>.dmg
+scripts/release.sh                                  # notarized build/release/Rydd-<version>.dmg, .zip and SHA256SUMS
+gh release create v<version> build/release/Rydd-<version>.dmg build/release/Rydd-<version>.zip build/release/SHA256SUMS \
+  --repo tangfy97/Rydd --title "Rydd <version>" --target main
 scripts/publish-website.sh ~/Documents/tang-spark.no
 git -C ~/Documents/tang-spark.no add -A && git -C ~/Documents/tang-spark.no commit -m "Rydd <version>"
 git -C ~/Documents/tang-spark.no push
 ```
 
-`publish-website.sh` regenerates the pages and copies them with the images. With a notarized disk image it also copies that, adds a Download button and points `/rydd/download` at it in `netlify.toml`; it refuses one that isn't notarized. It never commits or pushes.
+The download button links to the latest GitHub release, so publish the release before the pages. `publish-website.sh` regenerates the pages and copies them with the images. It never copies a disk image, edits `netlify.toml`, commits or pushes.
 
 Once the app is live on the App Store, set `APP_STORE_URL` in `website/generate.py` to show the Mac App Store button, and publish again.

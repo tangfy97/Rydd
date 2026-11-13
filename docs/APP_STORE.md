@@ -1,6 +1,6 @@
 # Releasing Rydd
 
-Rydd ships two ways from the same code: the **Mac App Store** (the `AppStore` build configuration) and a **download on tang-spark.no** (the `Release` configuration, signed with Developer ID and notarized). Both run in the App Sandbox with no network entitlement; they differ only in signing and in the menu, where the website build has Check for Updates… linking to its download page.
+Rydd ships two ways from the same code: the **Mac App Store** (the `AppStore` build configuration) and a **download from GitHub**, linked from tang-spark.no (the `Release` configuration, signed with Developer ID and notarized). Both run in the App Sandbox with no network entitlement; they differ only in signing and in the menu, where the website build has Check for Updates… linking to its download page.
 
 The Swift package in the same folder builds the same code without the sandbox, for development and for the `rydd` command-line tool. It is never shipped.
 
@@ -15,9 +15,10 @@ The Swift package in the same folder builds the same code without the sandbox, f
    ```bash
    scripts/appstore.sh upload
    ```
-4. Website: build, sign, notarize and staple, then copy the pages and the disk image to the site.
+4. Website: build, sign, notarize and staple, publish the disk image as a GitHub release, then copy the pages to the site.
    ```bash
    scripts/release.sh
+   gh release create v<version> build/release/Rydd-<version>.{dmg,zip} build/release/SHA256SUMS --repo tangfy97/Rydd --title "Rydd <version>" --target main
    scripts/publish-website.sh ~/Documents/tang-spark.no
    ```
    Review with `git -C ~/Documents/tang-spark.no status`, then commit and push (see [WEBSITE.md](WEBSITE.md)).
